@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_rush/pages/Homepage.dart';
-import 'package:mobile_rush/pages/Sign_In.dart';
-import 'package:mobile_rush/pages/Sign_Up.dart';
-import 'package:mobile_rush/pages/Terms.dart';
 import 'package:mobile_rush/route_generator.dart';
 
 void main() {
@@ -18,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         fontFamily: 'Poppins',
-        primaryColor: Color(0xFF007AFF),
+        primaryColor: const Color(0xFF007AFF),
         // textTheme: const TextTheme(
         //   headline1: TextStyle(color: Color(0xFF007AFF)),
         // ),

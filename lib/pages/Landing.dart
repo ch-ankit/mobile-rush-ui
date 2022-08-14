@@ -13,21 +13,37 @@ class _LandingState extends State<Landing> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          Text(
+          const Text(
             'Home',
             style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
+          const Image(
+            image: AssetImage('assets/images/logo_ebpearls.png', bundle: null),
+          ),
+          const Divider(color: Colors.grey, thickness: 2),
+          const Text('Award-winning digital agency'),
           Row(
             children: [
-              Image(
-                image: NetworkImage(
-                    'https://drive.google.com/uc?export=view&id=1Bjg9hEIB_s4Jg59dEVuG02vcTqoEBQcS'),
-              )
+              Container(
+                child: Column(children: [
+                  RichText(
+                      text: const TextSpan(text: "3400 +", children: [
+                    TextSpan(text: "Projects"),
+                    TextSpan(text: "Delivered"),
+                  ]))
+                ]),
+              ),
+              Container()
             ],
-          )
+          ),
+          Row(
+            children: [Container(), Container()],
+          ),
+          const Text(
+              """EB Pearls is a full-service digital agency based in Sydney. We help you connect with your customers and grow your business with creative, results-driven websites and mobile applications.""")
         ],
       ),
     );

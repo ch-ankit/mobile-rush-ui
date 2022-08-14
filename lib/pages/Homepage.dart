@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:mobile_rush/pages/AboutUs.dart';
 import 'package:mobile_rush/pages/Contacts.dart';
 import 'package:mobile_rush/pages/Landing.dart';
@@ -21,7 +19,7 @@ class _HomepageState extends State<Homepage> {
     final PageController controller = PageController();
     return Scaffold(
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Color(0xFF292A3B),
+          backgroundColor: const Color(0xFF292A3B),
           type: BottomNavigationBarType.fixed,
           currentIndex: _selectedIndex,
           selectedItemColor: Colors.yellow,
@@ -32,7 +30,7 @@ class _HomepageState extends State<Homepage> {
             });
             controller.jumpToPage(_selectedIndex);
           },
-          items: [
+          items: const [
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.home,
@@ -67,7 +65,13 @@ class _HomepageState extends State<Homepage> {
               _selectedIndex = index;
             });
           },
-          children: [Landing(), Projects(), AboutUs(), OurTeam(), Contacts()],
+          children: const [
+            Landing(),
+            Projects(),
+            AboutUs(),
+            OurTeam(),
+            Contacts()
+          ],
         ));
   }
 }
